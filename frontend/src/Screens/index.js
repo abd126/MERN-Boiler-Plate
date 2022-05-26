@@ -1,1 +1,2 @@
-export {default as Signup} from './Auth/Signin'
+export { default as Login} from "./Auth/Login"
+export { default as Signup} from "./Auth/Signup"
