@@ -12,15 +12,14 @@ const INITIAL_STATE = {
 
 
 const authReducer = (state = INITIAL_STATE , action) =>{
-    // console.log(action.payload,"Reducer");
-
+    
     switch(action.type){
 
-            // case ActionTypes.SET_LOADING:
-            //     return{
-            //         ...state,
-            //         setLoading : true
-            //     }
+            case ActionTypes.SET_LOADING:
+                return{
+                    ...state,
+                    setLoading : true
+                }
 
             case ActionTypes.ADD_USER:
                 return{
@@ -30,13 +29,13 @@ const authReducer = (state = INITIAL_STATE , action) =>{
                     setError : ""
                 } 
                 
-            // case ActionTypes.USER_LOGIN:
-            //     return{
-            //         ...state,
-            //         currentUser:action.payload,
-            //         setLoading : false,
-            //         setError : ""
-            //     }
+            case ActionTypes.USER_LOGIN:
+                return{
+                    ...state,
+                    currentUser:action.payload,
+                    setLoading : false,
+                    setError : ""
+                }
 
                 case ActionTypes.SET_ERROR:
                     return {

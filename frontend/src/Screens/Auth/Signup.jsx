@@ -10,9 +10,8 @@ const Signup = () => {
     const [contact, setContact] = useState("")
 
     
-    const {users} = useSelector((state)=> state.authReducer)
-    console.table(users)
-
+    const {users ,setLoading , setError} = useSelector((state)=> state.authReducer)
+    
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
@@ -26,6 +25,7 @@ const Signup = () => {
             contact
         }
         dispatch(signupAction(userObj))
+        navigate("/")
 
 
     }
@@ -67,11 +67,17 @@ const Signup = () => {
 
                 <br />
                 <br />
-
+                {
+                    setLoading ? (
+                        <button>
+                        ...Loading
+                    </button>
+                    ) :
+                
                 <button>
                     Sign Up
                 </button>
-
+            }
             </form>
         </div>
     )

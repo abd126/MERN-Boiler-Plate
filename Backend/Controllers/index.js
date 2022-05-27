@@ -1,4 +1,4 @@
-// const Login_Controller = require("./AuthController/login");
+const loginController = require("./AuthController/login");
 const allUser = require("./AuthController/allUser");
 const SignupController = require("./AuthController/signup");
 
@@ -6,7 +6,7 @@ const SignupController = require("./AuthController/signup");
 
 
 module.exports = {
-    // Login_Controller : Login_Controller,
+    loginController : loginController,
     SignupController : SignupController,
     allUser : allUser,
 }
